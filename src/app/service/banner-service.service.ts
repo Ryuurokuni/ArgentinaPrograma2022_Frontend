@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { AcercaDe } from '../model/acerca-de';
 import { BannerImages } from '../model/BannerImages';
 
@@ -8,8 +9,8 @@ import { BannerImages } from '../model/BannerImages';
   providedIn: 'root'
 })
 export class BannerService {
+  private url = `${environment.apiUri}/imagenes`;
 
-  private url = 'http://localhost:8080/imagenes';
 
   profileUrl = this.url + "/profile";
   bannerUrl = this.url + "/banner";

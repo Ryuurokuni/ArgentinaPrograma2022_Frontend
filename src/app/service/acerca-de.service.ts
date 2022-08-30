@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { AcercaDe } from '../model/acerca-de';
 
 @Injectable({
@@ -14,7 +15,7 @@ export class AcercaDeService {
     return this._aboutData;
   }
 
-  url = 'http://localhost:8080/acercade';
+  url = `${environment.apiUri}/acercade`;
   constructor(private httpClient : HttpClient) { 
     this.fetchData();
   }

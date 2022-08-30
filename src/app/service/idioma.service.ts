@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Idioma } from '../model/idioma';
 import { AuthService } from './auth.service';
 
@@ -9,7 +10,8 @@ import { AuthService } from './auth.service';
 })
 export class IdiomaService {
 
-  url = 'http://localhost:8080/idioma/';
+  private url = `${environment.apiUri}/idioma/`;
+
 
   public items: Idioma[] = [];
 

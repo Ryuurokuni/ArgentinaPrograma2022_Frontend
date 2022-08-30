@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { ExperienciaLaboral } from '../model/experiencia-laboral';
 import { AuthService } from './auth.service';
 
@@ -8,7 +9,8 @@ import { AuthService } from './auth.service';
   providedIn: 'root'
 })
 export class ExperiencialaboralService {
-  expURL = 'http://localhost:8080/experiencialaboral/';
+  private expURL = `${environment.apiUri}/experiencialaboral/`;
+
 
   public items: ExperienciaLaboral[] = [];
 
