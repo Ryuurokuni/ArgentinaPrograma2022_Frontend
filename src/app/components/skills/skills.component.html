@@ -1,0 +1,80 @@
+<div class="prim">
+  <h2 id="titulo">Skills
+    <app-skills-crear></app-skills-crear>
+
+  </h2>
+
+  <div class="">
+    <ul>
+      <li *ngFor="let item of items; index as i">
+        <div class="text-center"><circle-progress
+          [title]="item.nombre"
+          [titleFontWeight]="'bold'"
+          [showUnits]="false"
+          [showSubtitle]="false"
+          [percent]="item.porcentaje"
+          [radius]="100"
+          [outerStrokeWidth]="8"
+          [innerStrokeWidth]="4"
+          [outerStrokeColor]="'#ce956c'"
+          [innerStrokeColor]="'#D2D2D2'"
+          [animation]="true"
+          [animationDuration]="350"
+          ></circle-progress>
+          <button type="button" class="btn btn-danger" *ngIf="isLoggedIn" (click)="delete(item.id)">
+            <fa-icon [icon]="['fas','trash']"></fa-icon>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+</div>
+ 
+ 
+ 
+ 
+ <!-- <div class="row">
+  <h2 id="titulo">Skills</h2>
+  <app-skills-crear *ngIf="isLogged"></app-skills-crear>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4"><circle-progress
+    [title]="'Ingles'"
+    [showUnits]="false"
+    [showSubtitle]="false"
+    [percent]="75"
+    [radius]="100"
+    [outerStrokeWidth]="16"
+    [innerStrokeWidth]="8"
+    [outerStrokeColor]="'blue'"
+    [innerStrokeColor]="'blue'"
+    [animation]="true"
+    [animationDuration]="300"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4"><circle-progress
+    [title]="'Skill 1'"
+    [showUnits]="false"
+    [showSubtitle]="false"
+    [percent]="45"
+    [radius]="100"
+    [outerStrokeWidth]="16"
+    [innerStrokeWidth]="8"
+    [outerStrokeColor]="'black'"
+    [innerStrokeColor]="'black'"
+    [animation]="true"
+    [animationDuration]="300"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4"><circle-progress
+  [percent]="85"
+  [radius]="100"
+  [outerStrokeWidth]="16"
+  [innerStrokeWidth]="8"
+  [outerStrokeColor]="'#78C000'"
+  [innerStrokeColor]="'#C7E596'"
+  [animation]="true"
+  [animationDuration]="300"
+    ></circle-progress>
+  </div>
+</div> -->

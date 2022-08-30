@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+@import 'variables.scss';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+html, body {
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+  /* background-color: whitesmoke; */
+}
+
+
+
+.primario {
+  /* background-color:  #c76c3f; */
+  /* background-color: #bd9476; */
+  background-color: #ce956c;
+}
+
+.prim{
+  background-color: whitesmoke;
+  border: solid 1px #ccc;
+  margin-bottom: 1.7rem;
+  padding: 1rem;
+  box-shadow: 1px 4px 5px #2222226b
+}
+
+.boton-submit{
+  font-family: 'Lato', sans-serif;
+  background-color: #ce956c;
+  color: black;
+  border-color: black;
+  border-width: 2px;
+}
+
+.boton-submit:hover{
+  background-color:  hsl(25, 35%, 20%);
+  border-color: rgb(39, 39, 39);
+}
+
+.boton-submit:active{
+  background-color: hsl(25, 35%, 20%);
+  border-color: rgb(39, 39, 39);
+}
+
+.modal-edit-header{
+  background-color: #ce956c;
+}
+
+.modal-edit-body{
+  background-color: whitesmoke;
+}

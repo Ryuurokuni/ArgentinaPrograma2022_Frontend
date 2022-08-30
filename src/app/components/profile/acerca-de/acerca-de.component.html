@@ -1,0 +1,119 @@
+<div id="contenedor-acerca-de">
+  <div class="actions-container">
+    <button *ngIf="isLoggedIn && !editMode" type="button" class="btn btn-outline-dark" (click)="toggleEdit()">
+      <fa-icon [icon]="['fas','pencil']"></fa-icon>
+    </button>
+    <button *ngIf="isLoggedIn && editMode" type="button" class="btn btn-outline-dark" (click)="save()">
+      <fa-icon [icon]="['fas','check']"></fa-icon>
+    </button>
+    <button *ngIf="isLoggedIn && editMode" type="button" class="btn btn-danger" (click)="cancel()">
+      <fa-icon [icon]="['fas','ban']"></fa-icon>
+    </button>
+  </div>
+  <div class="grid-container">
+    <div class="profile-col">
+      <div id="foto-div">
+        <img id="profile-pic" class="img-fluid" [src]="profileUrl" alt="" />
+        <div *ngIf="isLoggedIn" id="hover-chirimbolo" (click)="openLG(contenido)">
+          <i class="bi bi-camera-fill"></i>
+        </div>
+      </div>
+      <div>
+        <h2 *ngIf="!editMode" id="nombre" class="text-center">
+          {{ acercaDe?.nombre }} {{ acercaDe?.apellido }}
+        </h2>
+        <div *ngIf="editMode" class="d-flex name-edit-container gap-2 mb-2">
+          <input
+            type="text"
+            class="w-100"
+            [(ngModel)]="nombre"
+            class="form-control form-control-sm"
+          />
+          <input
+            type="text"
+            class="w-100"
+            [(ngModel)]="apellido"
+            class="form-control form-control-sm"
+          />
+        </div>
+        <p *ngIf="!editMode" class="text-center ">{{ acercaDe?.titulo }}</p>
+        <p *ngIf="editMode" class="name-edit-container">
+          <input
+            type="text"
+            class="w-100"
+            [(ngModel)]="titulo"
+            class="form-control form-control-sm"
+          />
+        </p>
+      </div>
+    </div>
+    <div class="about-col">
+      <span>
+        <h3 id="titulo" class="text-center">
+            Acerca de mí
+        </h3>
+        <p *ngIf="!editMode" class="aboutMe">
+          {{ acercaDe?.descripcion }}
+        </p>
+        <div *ngIf="editMode">
+          <textarea
+            type="text"
+            class="w-100"
+            [(ngModel)]="descripcion"
+            class="form-control form-control-sm"
+            maxlength="680"
+          ></textarea>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+
+<ng-template #contenido let-modal>
+  <div class="modal-content">
+  <div class="modal-header modal-edit-header">
+    <h4 class="modal-title fw-bold">Cambiar Imágenes</h4>
+    <button
+      class="btn-close"
+      aria-label="close"
+      type="button"
+      (click)="modal.dismiss()"
+    ></button>
+  </div>
+  <div class="modal-body modal-edit-body">
+    <div>
+      <div class="">
+        <div class="form-group">
+          <label for="banner">Imagen de Banner:</label>
+          <input
+            type="file"
+            class="form-control form-control-sm"
+            name="banner"
+            (change)="bannerChange($event)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="fotoPerfil">Foto de Perfil:</label>
+          <input
+            type="file"
+            class="form-control form-control-sm"
+            name="fotoPerfil"
+            (change)="profileChange($event)"
+            required
+          />
+        </div>
+        <br />
+        <button
+          type="button"
+          class="btn btn-primary btn-md btn-block boton-submit"
+          (click)="onSubmit()"
+        >
+          Cambiar
+        </button>
+        <span> * Las imagenes no pueden exceder 1MB</span>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-template>

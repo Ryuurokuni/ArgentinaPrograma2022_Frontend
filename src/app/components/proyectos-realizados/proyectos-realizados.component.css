@@ -1,0 +1,17 @@
+h2{
+  text-align: start;
+}
+
+#titulo{
+  font-weight: bold;
+}
+
+table{
+  width: 100%
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

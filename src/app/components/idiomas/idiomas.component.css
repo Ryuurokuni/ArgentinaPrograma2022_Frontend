@@ -1,0 +1,34 @@
+h2{
+  text-align: start;
+}
+
+#titulo{
+  font-weight: bold;
+}
+table{
+  width: 100%
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 750px) {
+  ul{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media (min-width: 1050px) {
+  ul{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* color anterior del interior #946b4d */
+

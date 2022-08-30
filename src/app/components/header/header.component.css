@@ -1,0 +1,55 @@
+.navcontent{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+
+nav img{
+  height: 24px;
+}
+
+#logoAP{
+  height: 64px;
+  width: auto;
+}
+
+#YP{
+  font-weight: 600;
+}
+
+.btn{
+  border-width: medium;
+  font-weight: bold;
+}
+
+@media (min-width:500px) and (max-width:550px){
+  .navcontent{
+    font-size: 1.1rem;
+  }
+
+  a{
+    margin-top: 5px;
+  }
+
+}
+
+@media (min-width: 750px) {
+  .navcontent{
+    font-size: 2rem;
+  }
+
+  #logoAP{
+    height: 72px;
+  }
+
+  nav img{
+    height: 42px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .navcontent{
+    max-width: 1000px;
+  }
+}

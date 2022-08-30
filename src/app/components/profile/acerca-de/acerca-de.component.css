@@ -1,0 +1,116 @@
+span{
+  margin: 0;
+}
+
+p{
+  margin: 0;
+}
+
+#titulo{
+  font-weight: bold;
+}
+
+#nombre{
+  font-weight: bold;
+}
+
+p{
+  font-weight: 400;
+}
+
+textarea{
+  height: 180px;
+  resize: none;
+}
+
+#foto-div{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  padding-top: 140px;
+}
+
+#foto-div:hover #hover-chirimbolo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hover-chirimbolo{
+  cursor: pointer;
+  display: none;
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.685);
+  color: white;
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  transform: translateY(-4rem) scale(1.7, 1.7);
+}
+
+img#profile-pic {
+  top: 0;
+  position: absolute;
+  transform: translateY(-4rem) scale(1.7, 1.7);
+  width: 140px;
+  height: 140px;
+  align-self: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 1px 4px 5px #2222226b
+}
+
+.about-col{
+  padding: 1rem; 
+}
+
+#contenedor-acerca-de{
+  margin-bottom: 1.7rem;
+  position: relative;
+  padding-bottom: 1rem;
+  border: solid 1px #ccc;
+  background-color: whitesmoke;
+}
+
+.actions-container{
+  position: absolute;
+  gap: 0.2rem;
+  display: flex;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.aboutMe{
+  text-align: center;
+}
+
+.name-edit-container{
+  padding: 0 1rem;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  background-color: whitesmoke;
+}
+
+@media (min-width: 750px) {
+  .grid-container{
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 16rem;
+  }
+  .aboutMe{
+    text-align: left;
+  }
+  .name-edit-container{
+    padding-left: 1rem;
+    padding-right: 0;
+  }
+}
+

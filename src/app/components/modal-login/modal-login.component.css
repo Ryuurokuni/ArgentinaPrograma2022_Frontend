@@ -1,0 +1,16 @@
+@media (max-width: 650px) {
+  .boton-ic{
+    --bs-btn-padding-y: 0.25rem;
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-font-size: 0.875rem;
+    --bs-btn-border-radius: 0.25rem;
+  }
+}
+
+@media (max-width: 600px){
+  .boton-cs{
+    font-size: 14px;
+    padding-left: 0.35em;
+    padding-right: 0.35em;
+  }
+}

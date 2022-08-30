@@ -1,0 +1,13 @@
+<div class="prim">
+  <h2 id="titulo">Proyectos Realizados
+    <button *ngIf="isLoggedIn && !anyInserting" type="button" class="btn btn-outline-dark" (click)="CreateNew()"><fa-icon [icon]="['fas','plus']"></fa-icon></button>
+  </h2>
+  <div class="col-lg-10"></div>
+  <div>
+    <ul>
+      <li *ngFor="let item of items; index as i">
+        <app-proyectos-realizados-item [item]="item" [isLast]="i == items.length - 1"></app-proyectos-realizados-item>
+      </li>
+    </ul>
+  </div>
+</div>
